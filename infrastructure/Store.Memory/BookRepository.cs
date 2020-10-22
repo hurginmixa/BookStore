@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 
 namespace Store.Memory
 {
@@ -13,7 +13,7 @@ namespace Store.Memory
 
         public Book[] GetAllByTitle(string titlePart)
         {
-            throw new NotImplementedException();
+            return books.Where(book => book.Title.Contains(titlePart)).ToArray();
         }
     }
 }
