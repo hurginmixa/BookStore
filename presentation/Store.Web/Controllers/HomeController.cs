@@ -20,12 +20,30 @@ namespace Store.Web.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            _logger.LogInformation("Index Enter");
+            
+            try
+            {
+                return View();
+            }
+            finally
+            {
+                _logger.LogInformation("Index Exit");
+            }
         }
 
         public IActionResult Privacy()
         {
-            return View();
+            _logger.LogInformation("Privacy Enter");
+
+            try
+            {
+                return View();
+            }
+            finally
+            {
+                _logger.LogInformation("Privacy Exit");
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

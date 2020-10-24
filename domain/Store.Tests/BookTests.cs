@@ -1,9 +1,20 @@
+using System;
+using System.Globalization;
 using Xunit;
+using Xunit.Abstractions;
+using static System.Decimal;
 
 namespace Store.Tests
 {
     public class BookTests
     {
+        private readonly ITestOutputHelper _testOutputHelper;
+
+        public BookTests(ITestOutputHelper testOutputHelper)
+        {
+            _testOutputHelper = testOutputHelper;
+        }
+
         [Fact]
         public void IsIsbn_WithNull_ReturnFalse()
         {

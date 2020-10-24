@@ -1,16 +1,17 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace Store
 {
     public class Book
     {
-        public Book(int id, string isbn, string author, string title)
+        public Book(int id, string isbn, string author, string title, string description, decimal price)
         {
             Id = id;
             Title = title;
             Isbn = isbn;
             Author = author;
+            Description = description;
+            Price = price;
         }
 
         public int Id { get; }
@@ -20,6 +21,10 @@ namespace Store
         public string Isbn { get; }
 
         public string  Author { get; }
+
+        public string Description { get; }
+
+        public decimal Price { get; }
 
         internal static bool IsIsbn(string s)
         {
