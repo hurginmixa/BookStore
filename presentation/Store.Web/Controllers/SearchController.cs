@@ -9,10 +9,10 @@ namespace Store.Web.Controllers
 {
     public class SearchController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<SearchController> _logger;
         private readonly BookService _bookService;
 
-        public SearchController(ILogger<HomeController> logger, BookService bookService)
+        public SearchController(ILogger<SearchController> logger, BookService bookService)
         {
             _logger = logger;
             _bookService = bookService;
